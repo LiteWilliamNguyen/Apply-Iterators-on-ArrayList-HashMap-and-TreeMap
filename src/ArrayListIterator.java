@@ -22,7 +22,19 @@ public class ArrayListIterator {
         }
         System.out.println("Total sum: "+ sum);
 
-        //
+        // Step 3: Modification during iteration
+        try {
+            iterator  = numbers.iterator();
+            while (iterator.hasNext()) {
+                int num = iterator.next();
+                if (num % 2 ==0){
+                    iterator.remove(); //using remove method
+                }
+            }
+            System.out.print("List of odd number using iterator" + numbers);
+
+
+        }
 
     }
 }
