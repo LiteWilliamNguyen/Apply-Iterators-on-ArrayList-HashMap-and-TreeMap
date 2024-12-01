@@ -8,7 +8,7 @@ public class ArrayListIterator {
         ArrayList<Integer> numbers = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 10; i++){
-            numbers.add(random.nextInt(100)) // Random integer between 0 and 99
+            numbers.add(random.nextInt(100)); // Random integer between 0 and 99
         }
         System.out.println("List: " + numbers);
 
@@ -33,7 +33,14 @@ public class ArrayListIterator {
             }
             System.out.print("List of odd number using iterator" + numbers);
 
-
+            // Adding an element to the list during iteration
+            for (int i = 0; i < numbers.size(); i++) {
+                if (numbers.get(i) % 2 != 0) {
+                    numbers.add(77); // This will throw a ConcurrentModificationException
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Exception during modification: " + e);
         }
 
     }
