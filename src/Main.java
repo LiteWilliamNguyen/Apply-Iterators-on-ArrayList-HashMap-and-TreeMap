@@ -1,9 +1,12 @@
 import java.util.Map;
 import java.util.TreeMap;
 
+//Task 3: Advanced Operations with TreeMap
 public class Main {
     public static void main(String[] args) {
         // Step 1: Create and populate a TreeMap
+        //TreeMap Creation and Population.
+        //Create a TreeMap where keys are months (Strings) and values are average temperatures (Doubles). Populate it with data for at least six months.
         TreeMap<String, Double> temperatures = new TreeMap<>();
         temperatures.put("January", -5.0);
         temperatures.put("February", -2.0);
